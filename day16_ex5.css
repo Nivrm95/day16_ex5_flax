@@ -1,42 +1,50 @@
-header{
-    background-color:rgba(52, 58, 64, 1);
+
+*{
+    box-sizing: border-box;
+    }
+/* pc */
+.big-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#header{
+    background-color:rgb(64, 52, 52);
     position: sticky;
-    left: 0px;
-    right: 0px;
-    height: 50px;
     color:white ;
     display:flex;  
-    flex-direction: row;
     align-items: center;
     padding: 10px;
-   
+    width: 100%;
+    height: 20%;
+    gap: 3%;
     }
+
 .navbar{
     font-family: 'Roboto', sans-serif;
     font-size: larger;
     font-weight: 300;
     display: flex;
     justify-content:space-between;
-    width: 100px;
 }
 
 #list-bar{
     font-family: 'Roboto', sans-serif;;
     list-style: none;
     display: flex;
-    width: 400px;
-    justify-content:flex-start;
-    justify-content: space-around;
-    
-}
+    gap: 15%;
 
+}
 
 #top-two{
     color: rgba(255, 255, 255, 0.5);
 }
+
 #top-three{
     color: rgba(255, 255, 255, 0.25);
 }
+
 #top-four{
     color: rgba(255, 255, 255, 0.5);   
 }
@@ -45,12 +53,12 @@ header{
     display: flex;
     justify-content:flex-end;
     margin-left: auto;
-    gap: 5px;
+    gap: 2%;
 }
 
 #form{
     border-radius: 5px;
-    height: 35px;
+    height: 40px;
     color: rgba(206, 212, 218, 1);
 }
 
@@ -64,14 +72,23 @@ header{
     align-content: center;
 }
 
-
 #main-text{
     background-color:rgba(233, 236, 239, 1) ;
     display: flex;
     flex-direction: column;
     padding: 80px;
     font-family: 'Roboto', sans-serif;
-   
+    height: fit-content;
+    width: 100%;
+    height: 35%;
+    gap: 1%;
+}
+
+#main-titel{
+    display: flex;
+    font-size:80px;
+    font-weight: 50;
+    
 }
 
 #button-learn{
@@ -87,26 +104,24 @@ header{
     font-family: 'Roboto', sans-serif
 }
 
-
-#main-titel{
-    display: flex;
-    font-size:80px;
-    font-weight: 50;
-}
-
 #text-top{
     display: flex;
 }
 
 
-#dwon-text{
+#boxs-text{
     display: flex;
     font-family: 'Roboto';
     font-style: normal;
     margin: auto;
     justify-content: space-around;
-    
+    flex-direction: row;
+    width: 100%;
+    height: 35%;
+    gap: 1%;
+    padding: 80px;
 }
+    
 
 .heading{
     display: flex;
@@ -126,6 +141,11 @@ button{
     height: 38px;
 }
 
+#footer{
+    width: 100%;
+    height: 20%;
+    gap: 1%;
+}
 #company{
    
     margin-left: 50px;
@@ -138,4 +158,65 @@ button{
     margin-right: 60px;
     padding: 0px;
     border:solid 1px rgba(159, 138, 138, 0.196);;
+}
+
+
+/* mobile */
+@media screen and  (max-width:391px){
+ 
+    #header {
+        display: flex;
+        flex-direction: row;
+        margin-left: 0%;
+        margin-right: 0%;
+        height: 20%;
+    }
+    
+    #main-titel{
+        font-size:60px;
+        font-weight: 20;
+    }
+    
+    .navbar{
+        font-family: 'Roboto', sans-serif;
+        font-size: larger;
+        font-weight: 300;
+        display: flex;
+        justify-content:space-between;
+    }
+    
+    #search{
+        display: none;
+    }
+
+    #form{
+        display: none;
+    }
+
+    #list-bar{
+        display: none;
+    }
+    #main-text{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+
+    #boxs-text{
+        display: flex;
+        flex-direction:column;
+        font-family: 'Roboto';
+        font-style: normal;
+        margin: auto;
+        justify-content: space-around;
+        padding: 20px;
+    }
+    
+    
+    #company{
+        margin-left: 50px;
+        padding: 0px;
+        width: fit-content;
+        height:fit-content ;
+    }
 }
