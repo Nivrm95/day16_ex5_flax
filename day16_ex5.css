@@ -110,15 +110,15 @@
 
 
 #boxs-text{
-    display: flex;
+    display: grid;
     font-family: 'Roboto';
     font-style: normal;
     margin: auto;
-    justify-content: space-around;
-    flex-direction: row;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
     width: 100%;
     height: 35%;
-    gap: 1%;
+    gap: 3%;
     padding: 80px;
 }
     
@@ -203,8 +203,8 @@ button{
     }
 
     #boxs-text{
-        display: flex;
-        flex-direction:column;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
         font-family: 'Roboto';
         font-style: normal;
         margin: auto;
